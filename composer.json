@@ -1,0 +1,22 @@
+{
+    "name": "epay/payment-api-client",
+    "description": "PHP client for communicating with epay's payment api",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Epay\\PaymentClient\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Nikolaj Boel Jensen",
+            "email": "nbj@lindekrogen.dk"
+        }
+    ],
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "require-dev": {
+        "illuminate/support": "^10.43"
+    }
+}
