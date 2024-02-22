@@ -33,11 +33,17 @@ class Client
     {
         $url = sprintf("%s/api/v1/cit", $this->baseUrl);
 
-        $response = Http::contentType("application/json")->accept("application/json")->post($url, $request->toArray());
+        $response = Http::contentType("application/json")
+            ->accept('application/json')
+            ->withHeaders([
+                'Accept'        => 'application/json',
+                'Authorization' => 'bearer: ' . $this->apiKey,
+            ])
+            ->post($url, $request->toArray());
 
         // Bail with error response if something went wrong
         if ($response->failed()) {
-            return SessionResponse::errorResponse('Failed to create new session', 500);
+            return SessionResponse::errorResponse($response->body(), $response->status());
         }
 
         return JsonMapper::map($response->body(), SessionResponse::class);

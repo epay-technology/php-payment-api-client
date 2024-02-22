@@ -44,6 +44,16 @@ abstract class Response
     }
 
     /**
+     * Gets the HTTP Status code of the response
+     *
+     * @return int
+     */
+    public function getStatusCode()
+    {
+        return (int) $this->responseInformation['status_code'];
+    }
+
+    /**
      * Gets the current error message of the response
      *
      * @return string

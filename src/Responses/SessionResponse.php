@@ -18,4 +18,5 @@ class SessionResponse extends Response
     public string $id_expiry_month;
     public string $id_expiry_year;
     public string $id_security_code;
+    public string $key;
 }

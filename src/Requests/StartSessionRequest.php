@@ -13,11 +13,13 @@ class StartSessionRequest implements Request
      * @param string $merchantId
      * @param int $amount
      * @param string $currency
+     * @param int $timeout
      */
     public function __construct(
         public string $merchantId,
         public int $amount,
-        public string $currency
+        public string $currency,
+        public int $timeout
     ){}
 
     /**
@@ -60,6 +62,7 @@ class StartSessionRequest implements Request
             "merchant_id" => $this->merchantId,
             "amount"      => $this->amount,
             "currency"    => $this->currency,
+            "timeout"     => $this->timeout,
         ];
 
         // Add payment id if set
