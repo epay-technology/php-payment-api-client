@@ -39,7 +39,7 @@ class Client
             ->accept('application/json')
             ->withHeaders([
                 'Accept'        => 'application/json',
-                'Authorization' => 'bearer: ' . $this->apiKey,
+                'Authorization' => 'Bearer ' . $this->apiKey,
             ])
             ->post($url, $request->toArray());
 
