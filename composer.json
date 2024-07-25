@@ -8,12 +8,6 @@
             "Epay\\PaymentClient\\": "src/"
         }
     },
-    "authors": [
-        {
-            "name": "Nikolaj Boel Jensen",
-            "email": "nbj@lindekrogen.dk"
-        }
-    ],
     "minimum-stability": "stable",
     "prefer-stable": true,
     "require-dev": {
